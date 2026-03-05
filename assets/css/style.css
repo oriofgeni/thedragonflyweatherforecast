@@ -1,0 +1,132 @@
+.bg {
+    position: relative;
+    top: 0vw;
+    left: 0vw;
+    width: 100%;
+    z-index: 5;
+    opacity: 1;
+}
+
+video {
+  position: fixed;
+  top: 0vw;
+  left: 0vw;
+  width: 100%;
+}
+
+.video-1, .video-2, .video-3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 3s ease;
+    pointer-events: none; 
+}
+
+.video-2, .video-3 {
+    mix-blend-mode: screen;
+}
+
+body.state-1 .video-1,
+body.state-2 .video-2,
+body.state-3 .video-3 {
+  opacity: 1;
+}
+
+body {
+  cursor: none !important;
+  height: 100vh;
+}
+
+.dragonfly_cursor {
+  width: 13vw;  
+  height: 13vw;
+  background-image: url('../media/dragonfly_mouse.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: fixed; 
+  pointer-events: none; 
+  z-index: 9999;
+  transform: translate(-50%, -50%); 
+}
+
+.drop {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0);
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(15px); 
+  animation: bleed 2s forwards;
+  mix-blend-mode: screen;
+}
+
+@keyframes bleed {
+  0% { transform: scale(1); opacity: 0.9; }
+  100% { transform: scale(10); opacity: 0; }
+}
+
+/* Proverb */
+.roundsunny {
+    position: absolute;
+    background-color: transparent; 
+    border-radius: 50%;
+    width: 10vw;
+    height: 10vw; 
+    top: 30vw;
+    left: 55vw;
+}
+
+.roundcloudy {
+    position: absolute;
+    background-color: transparent;
+    border-radius: 50%;
+    width: 10vw;
+    height: 10vw; 
+    top: 90vw;
+    left: 60vw;
+}
+
+.roundrainy {
+    position: absolute;
+    background-color: transparent;
+    border-radius: 50%;
+    width: 10vw;
+    height: 10vw; 
+    top: 123vw;
+    left: 47vw;
+}
+
+.roundsunny, .roundcloudy, .roundrainy {
+    z-index: 1000;
+    cursor: none !important;
+}
+
+.media-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    display: grid;
+}
+
+.bg, #proverb-overlay {
+    grid-area: 1 / 1; 
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#proverb-overlay {
+    opacity: 0;
+    pointer-events: none; 
+    z-index: 100;         
+    transition: opacity 0.8s ease;
+}
+
+.show-proverb {
+    opacity: 1 !important;
+}

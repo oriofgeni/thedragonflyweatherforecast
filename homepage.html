@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Titel der Seite -->
+        <title>The Dragonfly</title>
+        
+        <link rel="stylesheet" href="./assets/css/reset.css">
+
+        <link rel="stylesheet" href="./assets/css/style.css">
+    </head>
+    
+    <body>
+
+        <!--Proverb-->
+
+        <div class="media-container">
+            <video class="bg" autoplay muted loop>
+                <source src="./assets/media/BG.webm" type="video/webm">
+            </video>
+    
+            <img src="./assets/media/proverb.png" id="proverb-overlay" alt="Proverb">
+        </div>
+
+        <div class="proverb">
+            <div class="roundsunny">
+            </div>
+
+            <div class="roundcloudy">
+            </div>
+            
+            <div class="roundrainy">
+            </div>
+        </div>
+
+         <!--Cursor-->
+
+        <div class="dragonfly_cursor"></div>
+
+        <video class="video-1" preload="auto" autoplay muted loop playsinline>
+            <source src="./assets/media/sunny.webm" type="video/webm">
+        </video>
+
+        <video class="video-2" autoplay muted loop>
+            <source src="./assets/media/cloudy.webm" type="video/webm">
+        </video>
+
+        <video class="video-3" autoplay muted loop>
+            <source src="./assets/media/rainy.webm" type="video/webm">
+        </video>
+
+        <audio id="sound1" src="./assets/media/sound1.mp3" loop preload="auto"></audio>
+        <audio id="sound2" src="./assets/media/sound2.mp3" loop preload="auto"></audio>
+        <audio id="sound3" src="./assets/media/sound3.mp3" loop preload="auto"></audio>
+ 
+        <script src="assets/js/script.js"></script>
+    </body> 
+</html>

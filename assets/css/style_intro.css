@@ -1,0 +1,45 @@
+video {
+  position: fixed;
+  top: 0vw;
+  left: 0vw;
+  width: 100%;
+}
+
+.navbar {
+    width: 100%;
+    background-color: transparent;
+    padding: 0 5rem 0 3rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
+    position: fixed;
+    bottom: 1rem;
+}
+
+.navbar ul {
+    list-style: none;
+    gap: 3rem;
+    display: flex;
+}
+
+.navbar ul img {
+    position: relative;
+    width: 5rem;
+}
+
+.play .play_inactive {
+    display: inline;
+}
+
+.play .play_active {
+    display: none
+}
+
+.play:hover .play_inactive  {
+    display: none;
+}
+
+.play:hover .play_active {
+    display: inline;
+}
